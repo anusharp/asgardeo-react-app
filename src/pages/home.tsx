@@ -21,7 +21,7 @@ import React, { FunctionComponent, ReactElement, useCallback, useEffect, useStat
 import { default as authConfig } from "../config.json";
 import REACT_LOGO from "../images/react-logo.png";
 import { DefaultLayout } from "../layouts/default";
-import { AuthenticationResponse } from "../components";
+import { AuthenticationResponse, HolidayResponse } from "../components";
 import { useLocation } from "react-router-dom";
 import { LogoutRequestDenied } from "../components/LogoutRequestDenied";
 import { USER_DENIED_LOGOUT } from "../constants/errors";
@@ -150,6 +150,7 @@ export const HomePage: FunctionComponent = (): ReactElement => {
                 state.isAuthenticated
                     ? (
                         <div className="content">
+                            <HolidayResponse/>
                             <AuthenticationResponse
                                 derivedResponse={ derivedAuthenticationState }
                             />

@@ -17,3 +17,4 @@
  */
 
 export * from "./authentication-response";
+export * from "./holiday-response";
