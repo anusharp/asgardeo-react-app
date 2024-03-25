@@ -17,7 +17,7 @@ RUN addgroup -S -g ${USER_GROUP_ID} ${USER_GROUP} \
 WORKDIR ${USER_HOME}
 
 # Set a non-root user
-USER ${USER_ID}
+# USER ${USER_ID}
 
 # Copy the rest of the application code to the container
 COPY --chown=${USER}:${USER_GROUP} . .
