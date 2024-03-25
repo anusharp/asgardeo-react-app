@@ -1,8 +1,6 @@
 FROM node:18-alpine
 
 # Build arguments for user/group configurations
-USER root
-USER 10001
 ARG USER=asgusr
 ARG USER_ID=10001
 ARG USER_GROUP=asggrp
