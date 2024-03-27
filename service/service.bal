@@ -42,6 +42,10 @@ service /reservations on new http:Listener(9090) {
             select r;
     }
 
+    resource function get rooms() returns Room[] {
+        return rooms;
+    }
+
     resource function get roomTypes(string checkinDate, string checkoutDate, int guestCapacity) returns RoomType[]|error {
         return getAvailableRoomTypes(checkinDate, checkoutDate, guestCapacity);
     }
